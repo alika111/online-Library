@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="index.xhtml" x="125" y="92" zoom="true"/>
+        <Node id="pages/Books.xhtml" x="107" y="294" zoom="false"/>
+        <Node id="templates/left_menu.xhtml" x="413" y="232" zoom="true"/>
+        <Node id="templates/header.xhtml" x="593" y="304" zoom="true"/>
+        <Node id="templates/footer.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="templates/template.xhtml" x="400" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

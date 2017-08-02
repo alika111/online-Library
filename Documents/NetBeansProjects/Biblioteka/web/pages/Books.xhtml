@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+
+            <ui:define name="title">
+                Book List
+            </ui:define>
+
+            <ui:define name="books_count">
+                <h:outputText value="#{bookListController.count_of_books} #{msg.books_found}" id="booksCount"></h:outputText> 
+            </ui:define>
+            <ui:define name="content">
+                <h:dataTable id="booksList" value="#{bookListController.bookList}" var="b" cellspacing="10px" columnClasses="col1, col2, col3"> 
+
+                    <h:column>
+                        <h:graphicImage  value="/ShowImage?id=#{b.ID}" width="150" height="200"/>
+                    </h:column>
+                    <h:column>
+                        <div>
+                            <p> <h:outputLink value="#{request.contextPath}/Content?id=#{b.ID}" target="_blank">#{b.name}</h:outputLink></p>
+                            <p><strong>#{msg.author_name}: </strong>#{b.author}</p>                           
+                            <p><strong>page count:</strong> #{b.page}</p>
+                            <p><strong>publisher</strong> #{b.publisher}</p>
+                            <p><strong>publish year:</strong> #{b.year}</p>
+                            <p>
+                                <h:graphicImage library="images" name="read.png" /><h:outputLink styleClass="content_link" value="#{request.contextPath}/Content?id=#{b.ID}"  target="_blank">read </h:outputLink>                                  
+                                <h:graphicImage library="images" name="download.png"/>
+                                <h:outputLink styleClass="download_link" value="#{request.contextPath}/DownloadPDF" target="blank">
+                                    <h:outputText value="download"></h:outputText>
+                                    <f:param name="id" value="#{b.ID}"/>
+                                    <f:param name="filename" value="#{b.name}"/>
+                                </h:outputLink>
+                                
+                        </p>
+                        </div>
+
+                    </h:column>
+                    <h:column>
+                        <div class="book_details">
+                            <p><strong>description</strong></p>
+                            <p >#{b.description}</p>
+                        </div>
+                    </h:column>
+
+                </h:dataTable>
+            </ui:define>
+                <ui:define name="pages" >
+                    <h:form rendered="#{bookListController.count_of_books>bookListController.books_on_page}">
+                        pages
+
+                        <ui:repeat value="#{bookListController.pagenumbers}" var="pageNumber" >
+                            <h:commandLink value="#{pageNumber}" action="#{bookListController.selectpage()}" styleClass="#{pageNumber == bookListController.selected_page_number ? 'selected_page':''}">
+                                <f:param name="page_number" value="#{pageNumber}" />
+                                <f:ajax event="click" render=":booksList @form :pages1 :booksCount" listener="#{bookListController.selectpage()}"/>
+                            </h:commandLink>
+                        </ui:repeat>
+
+                    </h:form>
+
+                </ui:define>
+
+        </ui:composition>
+    </h:body>
+</html>
+

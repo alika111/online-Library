@@ -1,0 +1,257 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30.06.2017, 16:06:39
+    Author     : alex
+*/
+
+body {
+    font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+    background-color: #EEE;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 13px;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;	 
+    padding-right: 15px;
+    padding-left: 15px; 
+}
+.container {
+    width: 1000px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    height: 768px;
+}
+
+
+.header {
+    background-color: #FFFFFF;
+    height:200px;
+}/*
+
+*/.footer{
+    color:#cccccc;
+    text-align: center;
+    margin:5px;
+    height: 50px;
+}/*
+
+
+*/.middle {
+    background-color: #FFFFFF;
+    width: 100%;
+}/*
+
+*/.left_menu {
+    float: left;
+    width: 20%;
+    padding-bottom: 10px;
+    margin: 10px;
+}/*
+*/.content {
+    padding: 10px 0;
+    width: 75%;
+    float: left;
+}/*
+*/.search{
+    margin:20px;
+    text-align: left;
+    background-color: #dbe4f6;
+    height: 33px;
+    vertical-align: middle;
+    padding: 5px;
+    width: 95%;
+    float:left;
+}/*
+
+*/.search_form{
+    float:right;
+    width: 100%;
+    text-align: right;
+}/*
+
+*/.logo{
+    text-align: left;
+    padding: 20px;
+    float:left;
+    width:100px;
+    height: 100px;
+}/*
+
+*/.descr{
+    float: left;
+    width: 600px;
+    text-align: left;
+    padding-top: 50px;
+}/*
+
+*/.welcome{
+    text-align: right;
+    padding-top: 50px;
+    font-weight: normal;
+    float:right;
+}
+.welcome a{
+    margin-right: 15px;
+    font-size: 10px;
+}
+.search_button {
+
+    -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+    background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+    background-color:#79bbff;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    color:#ffffff;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #528ecc;
+}.search_button:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+    background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+    background-color:#378de5;
+    cursor:pointer;
+}.search_button:active {
+    position:relative;
+    top:1px;
+}
+.search_string{
+    margin-left:20px;
+    width: 630px;
+    float: left;
+    padding: 3px;
+    margin:3px;
+    background-color: #f8f8f8;
+    border: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height:20px;
+}
+.search_type_dropdown{
+    margin-right:20px;
+     -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+    background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+    background-color:#79bbff;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    color:#ffffff;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #528ecc;
+    
+}
+.genres a:hover, a:active, a:focus {
+    background-color: #FFFFFF;
+    color: #00BFFF;
+}
+.genres a, a:visited{
+    text-decoration: none;
+    padding: 3px 3px 3px 15px;
+    display: block; 
+    color: #0000FF;
+
+}
+.col1{
+    vertical-align: top;
+    width: 100px;
+}
+
+.col2{
+    vertical-align: top;
+    width: 240px;
+}
+
+.col2 a{
+    font-weight: bold;
+    color:#378de5;
+    font-size: 15px;
+}
+.book_details{
+    float:left;
+    margin-top: 10px;
+}
+.select{
+    margin-right: 30px;
+ display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  width: 150px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 #f5f5f5;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+.select:before, .select:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888 transparent;
+  pointer-events: none;
+}
+.select:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+.select:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+.pages a{
+    margin-left: 5px;
+    margin-top: 50px;
+}
+
+.pager a{
+    margin-left: 5px;
+    margin-top: 50px;
+}
+
+.pager{
+    margin-left: 15px;
+    width: 100%;
+    float:left;
+}
+.pager .selected_page{
+    color:red;
+}
